@@ -1,0 +1,33 @@
+teams:
+  atl: 
+    name: "Atlanta Dream"
+    urls:
+    - "https://www.espn.com/wnba/team/schedule/_/name/atl/season/2022"
+    - "https://www.espn.com/wnba/team/schedule/_/name/atl/season/2023"
+  chi: 
+    name: "Chicago Sky"
+  #   urls:
+
+  # - : "Connecticut Sun"
+  #     urls:
+  #       - last_year: "https://www.espn.com/wnba/team/schedule/_/name/conn/season/2022" 
+  #   abbreviation: "CON" 
+  # - name: "Indiana Fever"
+  #   abbreviation: "IND"  
+  # - name: "New York Liberty"
+  #   abbreviation: "NY"  
+  # - name: "Washington Mystics"
+  #   abbreviation: "WAS"  
+  # - name: "Dallas Wings"
+  #   abbreviation: "DAL"  
+  # - name: "Las Vegas Aces"
+  #   abbreviation: "LV"  
+  # - name: "Los Angeles Sparks"
+  #   abbreviation: "LA" 
+  # - name: "Minnesota Lynx"
+  #   abbreviation: "MIN"  
+  # - name: "Phoenix Mercury"
+  #   abbreviation: "PHO"  
+  # - name: "Seattle Storm"
+  #   abbreviation: "SEA"
+
