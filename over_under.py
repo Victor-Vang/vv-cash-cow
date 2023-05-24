@@ -27,7 +27,7 @@ class BettingMatchup:
         self.data = None
 
     def load_data(self):
-        if self.sport is not "WNBA":
+        if self.sport != "wnba":
             raise ValueError("This sport has yet to be implimented! Patience!")
         self.data = project_utils.loadYamlAsObject(f"{self.sport}.yaml")
         
@@ -36,20 +36,21 @@ class BettingMatchup:
     def select_team(self):
         team_choices = [team.name for team in self.data.teams.__dict__.values()]
         print(team_choices)
-        print(type(team_choices))
+
         questions = [inquirer.List("team", message="Please select a team", choices=team_choices)]
-        
         team_choice = inquirer.prompt(questions)
+        selected_team = team_choice.get("team")
+        # team_urls = self.data.teams[se]
         
-        return team_choice.get("team")
+        return selected_team, 
+    
 
 if __name__ == "__main__":
     selector = SportSelector()
     sport = selector.select_sport()
-    print(sport)
+    print(f"You selected the {sport}!")
 
     bet = BettingMatchup(sport)
     bet.load_data()
     chosen_team = bet.select_team()
-    print(chosen_team)
-    print(type(chosen_team))
+    print(f"You chose the {chosen_team}!")
