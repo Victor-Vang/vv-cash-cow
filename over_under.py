@@ -18,6 +18,8 @@ class SportSelector:
             answers = inquirer.prompt(sports_options)
             self.sport = answers["sport"]
         
+        print(f"You selected the {self.sport}!\n")
+
         return self.sport
 
 
@@ -25,6 +27,8 @@ class BettingMatchup:
     def __init__(self, sport: str):
         self.sport = sport.lower()
         self.data = None
+        self.team_name = None
+        self.team_abbreviation = None
 
     def load_data(self):
         if self.sport != "wnba":
@@ -33,24 +37,32 @@ class BettingMatchup:
         
         return self.data
 
+
     def select_team(self):
         team_choices = [team.name for team in self.data.teams.__dict__.values()]
-        print(team_choices)
-
         questions = [inquirer.List("team", message="Please select a team", choices=team_choices)]
         team_choice = inquirer.prompt(questions)
         selected_team = team_choice.get("team")
-        # team_urls = self.data.teams[se]
-        
-        return selected_team, 
+
+        self.extract_team_info(selected_team)
+
+        print(f"You chose the {self.team_name}!")
+
+        attribute = getattr(self.data.teams, self.team_abbreviation.lower())
+        print(attribute.urls)
+
+        return selected_team
+    
+    def extract_team_info(self, selected_team: str):
+        parts = selected_team.split(" (")
+        self.team_name = parts[0]
+        self.team_abbreviation = parts[1][:-1]
     
 
 if __name__ == "__main__":
     selector = SportSelector()
     sport = selector.select_sport()
-    print(f"You selected the {sport}!")
 
-    bet = BettingMatchup(sport)
-    bet.load_data()
-    chosen_team = bet.select_team()
-    print(f"You chose the {chosen_team}!")
+    matchup = BettingMatchup(sport)
+    matchup.load_data()
+    chosen_team = matchup.select_team()
