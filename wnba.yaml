@@ -1,61 +1,61 @@
 teams:
   atl: 
-    name: "Atlanta Dream"
+    name: "Atlanta Dream (ATL)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/atl/season/2022"
     - "https://www.espn.com/wnba/team/schedule/_/name/atl/season/2023"
   chi: 
-    name: "Chicago Sky"
+    name: "Chicago Sky (CHI)"
     urls:
     - https://www.espn.com/wnba/team/schedule/_/name/chi/season/2022
     - https://www.espn.com/wnba/team/schedule/_/name/chi/season/2023
   conn:
-    name: "Connecticut Sun"
+    name: "Connecticut Sun (CONN)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/conn/season/2022" 
     - "https://www.espn.com/wnba/team/schedule/_/name/conn/season/2023"
   ind:
-    name: "Indiana Fever"
+    name: "Indiana Fever (IND)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/ind/season/2022" 
     - "https://www.espn.com/wnba/team/schedule/_/name/ind/season/2023"
   dal:
-    name: "Dallas Wings"
+    name: "Dallas Wings (DAL)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/dal/season/2022" 
     - "https://www.espn.com/wnba/team/schedule/_/name/dal/season/2023"
   lv: 
-    name: "Las Vegas Aces"
+    name: "Las Vegas Aces (LV)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/lv/season/2022"
     - "https://www.espn.com/wnba/team/schedule/_/name/lv/season/2023"
   la: 
-    name: "Los Angeles Sparks"
+    name: "Los Angeles Sparks (LA)"
     urls:
     - https://www.espn.com/wnba/team/schedule/_/name/la/season/2022
     - https://www.espn.com/wnba/team/schedule/_/name/la/season/2023
   min:
-    name: "Minnesota Lynx"
+    name: "Minnesota Lynx (MIN)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/min/season/2022" 
     - "https://www.espn.com/wnba/team/schedule/_/name/min/season/2023"
   ny:
-    name: "New York Liberty"
+    name: "New York Liberty (NY)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/ny/season/2022" 
     - "https://www.espn.com/wnba/team/schedule/_/name/ny/season/2023"
   phx:
-    name: "Phoenix Mercury"
+    name: "Phoenix Mercury (PHX)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/phx/season/2022" 
     - "https://www.espn.com/wnba/team/schedule/_/name/phx/season/2023"
   sea: 
-    name: "Seatlle Storm"
+    name: "Seattle Storm (SEA)"
     urls:
     - "https://www.espn.com/wnba/team/schedule/_/name/sea/season/2022"
     - "https://www.espn.com/wnba/team/schedule/_/name/sea/season/2023"
   wsh: 
-    name: "Washington Mystics"
+    name: "Washington Mystics (WSH)"
     urls:
     - https://www.espn.com/wnba/team/schedule/_/name/wsh/season/2022
     - https://www.espn.com/wnba/team/schedule/_/name/wsh/season/2023
