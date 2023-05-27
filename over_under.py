@@ -27,8 +27,7 @@ class BettingMatchup:
     def __init__(self, sport: str):
         self.sport = sport.lower()
         self.data = None
-        self.team_name = None
-        self.team_abbreviation = None
+        self.team = None
 
     def load_data(self):
         if self.sport != "wnba":
@@ -39,24 +38,14 @@ class BettingMatchup:
 
 
     def select_team(self):
-        team_choices = [team.name for team in self.data.teams.__dict__.values()]
+        team_choices = [team.name for team in self.data.teams]
         questions = [inquirer.List("team", message="Please select a team", choices=team_choices)]
         team_choice = inquirer.prompt(questions)
-        selected_team = team_choice.get("team")
+        self.team = team_choice["team"]
 
-        self.extract_team_info(selected_team)
+        print(f"You chose the {self.team}!\n")
 
-        print(f"You chose the {self.team_name}!")
-
-        attribute = getattr(self.data.teams, self.team_abbreviation.lower())
-        print(attribute.urls)
-
-        return selected_team
-    
-    def extract_team_info(self, selected_team: str):
-        parts = selected_team.split(" (")
-        self.team_name = parts[0]
-        self.team_abbreviation = parts[1][:-1]
+        return self.team
     
 
 if __name__ == "__main__":
